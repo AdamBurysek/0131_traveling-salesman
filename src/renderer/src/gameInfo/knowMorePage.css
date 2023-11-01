@@ -1,0 +1,57 @@
+.know-more_window {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: black;
+  z-index: 5;
+}
+
+.know-more_hide {
+  z-index: -35;
+}
+
+.know-more_content {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 1600px;
+  height: 800px;
+  overflow-y: auto;
+}
+
+.know-more_content h1 {
+  font-family: "Dimenze-Bold";
+  font-size: 80px;
+  color: #d88124;
+  text-align: center;
+}
+
+.know-more_content h4 {
+  font-family: "Dimenze-Bold";
+  font-size: 50px;
+  color: #d88124;
+  text-align: center;
+}
+
+ul {
+  color: white;
+  font-family: "Dimenze-Regular";
+  font-size: 48px;
+}
+
+b {
+  color: #d88124;
+}
+
+.know-more_content p {
+  color: white;
+  font-family: "Dimenze-Regular";
+  font-size: 48px;
+}
+
+.city_img {
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+  width: 800px;
+}

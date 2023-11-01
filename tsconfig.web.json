@@ -1,0 +1,27 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.tsx",
+    "src/preload/*.d.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@renderer/*": [
+        "src/renderer/src/*"
+      ]
+    }
+  },
+  "files": [
+    // other files...
+    "src/renderer/setup.json",
+    "src/renderer/src/data/sectionsData.json",
+    "src/renderer/src/game/data/easy.json",
+    "src/renderer/src/game/data/medium.json",
+    "src/renderer/src/game/data/hard.json"
+  ]
+}

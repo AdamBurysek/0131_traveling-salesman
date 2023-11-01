@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+.game-screen {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.point {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(223, 167, 0);
+  position: absolute;
+  border-radius: 20px;
+  border: 0;
+}
+
+.visited {
+  background-color: red;
+}
+
+.point_text {
+  position: relative;
+  left: -20px;
+  top: 22px;
+  font-size: large;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.text_upper {
+  top: -25px;
+}
+
+.canvas {
+  z-index: -1;
+}
+
+.game_map {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.text_background {
+  position: absolute;
+  width: 532px;
+  height: 86px;
+  border-radius: 0px 0px 39px 39px;
+  background: rgba(0, 0, 0, 0.77);
+  z-index: -2;
+  transition: all 0.5s linear;
+}
+
+.totaldistance_background {
+  top: 0;
+  left: 130px;
+}
+
+.shortestdistance_background {
+  top: -87px;
+  left: 1100px;
+  width: 700px;
+}
+
+.show_shortestdistance {
+  top: 0px;
+}
+
+.gamepage_text {
+  font-family: "Roboto";
+  position: relative;
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+.totaldistance_text {
+  top: 20px;
+}
+
+.smaller_text {
+  font-size: 30px;
+  top: 25px;
+}
+
+.game_button {
+  position: absolute;
+  background-color: rgba(0, 146, 68, 0.887);
+  border-radius: 46px;
+  border: none;
+  transition: all 0.5s ease-out;
+}
+
+.back_button {
+  left: 140px;
+  bottom: 20px;
+  width: 200px;
+  height: 80px;
+}
+
+.again_button {
+  left: 380px;
+  bottom: -90px;
+  width: 260px;
+  height: 80px;
+}
+
+.show-again_button {
+  left: 380px;
+  bottom: 20px;
+  width: 260px;
+  height: 80px;
+}
+
+.best-solution_button {
+  right: -610px;
+  bottom: 20px;
+  width: 600px;
+  height: 80px;
+}
+
+.show-best-solution_button {
+  right: 50px;
+}

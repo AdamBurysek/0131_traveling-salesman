@@ -1,0 +1,51 @@
+.map_window {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: rgb(255, 255, 255);
+  z-index: 5;
+}
+
+.map_hide {
+  z-index: -35;
+}
+
+.map_content {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 1600px;
+  height: 800px;
+  overflow-y: auto;
+  /* background-color: red; */
+}
+
+.map_content p {
+  color: white;
+  font-family: "Dimenze-Regular";
+  font-size: 48px;
+}
+
+.vida_map {
+  position: absolute;
+  left: 160px;
+  width: 1320px;
+}
+
+.map_background {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: rgba(0, 0, 0, 0.264);
+}
+
+.map-active_background {
+  position: absolute;
+  top: 930px;
+  right: 5px;
+  width: 140px;
+  height: 140px;
+  filter: blur(3px);
+  border-radius: 100px;
+  background-color: #b9b7b7;
+}

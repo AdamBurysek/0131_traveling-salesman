@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Dimenze-Bold";
+  src: url("../fonts/Dimenze-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Dimenze-Regular";
+  src: url("../fonts/Dimenze-Regular.otf") format("opentype");
+}
+
+.startPage {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+}
+
+.start_button {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  width: 600px;
+  height: 150px;
+  border-radius: 22px;
+  border: 10px solid #fff;
+  font-size: 64px;
+  font-family: "Dimenze-Regular";
+  color: #fff;
+  left: 664px;
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.753);
+  transition: all 0.2s ease-in;
+}
+
+.easy_button {
+  background: rgba(58, 182, 0, 0.94);
+  top: 314px;
+}
+
+.medium_button {
+  top: 524px;
+  background: rgba(244, 176, 0, 0.94);
+}
+
+.hard_button {
+  top: 744px;
+  background: rgba(186, 6, 45, 0.94);
+}
+
+.animate_button {
+  scale: 1.1;
+}
+
+.main_img {
+  position: absolute;
+  top: 0px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.clouds {
+  position: absolute;
+  height: 730px;
+  top: 0;
+  left: -8000px;
+  z-index: -5;
+  transition: all 700s linear;
+}
+
+.clouds_moving {
+  left: 0px;
+}
+
+.title {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.675);
+  z-index: 10;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Dimenze-Bold";
+  color: white;
+  font-size: 64px;
+}
+
+.game_title {
+  position: relative;
+  top: -20px;
+}

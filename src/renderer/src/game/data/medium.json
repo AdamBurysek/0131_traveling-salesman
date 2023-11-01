@@ -1,0 +1,53 @@
+[{
+    "image":"jihomoravskyKraj",
+    "scale": 0.27746
+  },
+      { 
+        "id":1,
+        "shortestDistance": 965,
+        "coordinates": [
+          [1241, 786, "Brno", "Brno", "Brno", false],
+          [1511, 854, "Uherský Brod", "Uherský Brod", "Ungarisch Brod", false],
+          [1519, 771, "Zlín", "Zlín", "Zlín", false],
+          [1644, 678, "Rožnov pod Radhoštěm", "Rožnov pod Radhoštěm", "Rosenau unter dem Radhoscht", true],
+          [1579, 487, "Opava", "Opava", "Troppau", false],
+          [1207, 562, "Svitavy", "Svitavy", "Zwittau", false],
+          [1128, 293, "Náchod", "Náchod", "Nachod", false],
+          [401, 568, "Plzeň", "Plzeň", "Pilsen", false],
+          [675, 600, "Sedlčany", "Sedlčany", "Sedlčan", false],
+          [624, 1007, "Lipno nad Vltavou", "Lipno nad Vltavou", "Lipno an der Moldau", true]
+        ]
+      },
+      {
+        "id":2,
+        "shortestDistance": 1038,
+        "coordinates": [
+          [1409, 628, "Olomouc", "Olomouc", "Olmütz", false],
+          [1466, 837, "Uherské Hradiště", "Uherský Brod", "Ungarisch Brod", true],
+          [1721, 554, "Havířov", "Havířov", "Havirov", false],
+          [1339, 479, "Šumperk", "Šumperk", "Mährisch Schönberg", true],
+          [985, 162, "Špindlerův Mlýn", "Špindlerův Mlýn", "Spindlermühle", true],
+          [685, 429, "Praha", "Prague", "Prag", true],
+          [472, 260, "Most", "Most", "Brüx", false],
+          [379, 707, "Klatovy", "Klatovy", "Klattau", false],
+          [685, 873, "České Budějovice", "České Budějovice", "Böhmisch Budweis", false],
+          [976, 621, "Havlíčkův Brod", "Havlíčkův Brod", "Deutschbrod", false]
+        ]
+      },
+      {
+        "id":3,
+        "shortestDistance": 1142,
+        "coordinates": [
+          [1241, 786, "Brno", "Brno", "Brünn", false],
+          [1315, 960, "Břeclav", "Břeclav", "Lundenburg", true],
+          [1805, 635, "Jablunkov", "Jablunkov", "Jablunkau", true],
+          [1671, 535, "Ostrava", "Ostrava", "Ostrau", true],
+          [1025, 448, "Pardubice", "Pardubice", "Pardubitz", false],
+          [802, 290, "Mladá Boleslav", "Mladá Boleslav", "Jungbunzlau", false],
+          [841, 154, "Liberec", "Liberec", "Reichenberg", false],
+          [271, 368, "Karlovy Vary", "Karlovy Vary", "Karlsbad", false],
+          [741, 553, "Benešov", "Benešov", "Beneschau", false],
+          [647, 938, "Český Krumlov", "Český Krumlov", "Krumau", false]
+        ]
+      }
+    ]

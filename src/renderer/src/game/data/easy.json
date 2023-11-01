@@ -1,0 +1,41 @@
+[{
+  "image":"jihomoravskyKraj",
+  "scale": 0.11055
+},
+    { 
+      "id":1,
+      "shortestDistance": 229,
+      "coordinates": [
+        [927,467, "Brno", "Brno", "Brünn", false],
+        [955, 295, "Blansko", "Blansko", "Blansko", false],
+        [1180, 380, "Vyškov", "Vyškov", "Wischau", false],
+        [1260, 800, "Hodonín","Hodonín","Göding", true],
+        [1110, 905, "Břeclav","Břeclav","Lundenburg", true],
+        [555, 800, "Znojmo", "Znojmo","Znaim",false]
+      ]
+    },
+    {
+      "id":2,
+      "shortestDistance": 260,
+      "coordinates": [
+        [927,467, "Brno","Brno","Brünn", false],
+        [733,558, "Ivančice","Ivančice","Eibenschitz", false],
+        [407,762, "Vranov nad Dyjí","Vranov nad Dyjí","Frain an der Thaya", true],
+        [1263,653, "Kyjov","Kyjov","Gaya", true],
+        [1202,345, "Pustiměř","Pustiměř","Pustimer", false],
+        [955,168, "Boskovice","Boskovice","Boskowitz", false]
+      ]
+    },
+    {
+      "id":3,
+      "shortestDistance": 296,
+      "coordinates": [
+        [927,467, "Brno","Brno","Brünn", false],
+        [905,112, "Letovice","Letovice","Lettowitz", false],
+        [1019,318, "Jedovnice","Jedovnice","Jedlowitz", false],
+        [1532,796, "Javorník","Javorník","Jauernig", true],
+        [1011,719, "Hustopeče","Hustopeče","Auspitz", false],
+        [679,903, "Jaroslavice","Jaroslavice","Jaroslavitz", true]
+      ]
+    }
+  ]
