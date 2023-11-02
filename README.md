@@ -1,15 +1,13 @@
-# VIDA - Problém obchodního cestujícího
+# VIDA - Menu
 
 # Odkaz na web
-[https://adamplanet.cz/ostatniweby/travelingsalesman](https://adamplanet.cz/ostatniweby/travelingsalesman)
+[https://adamplanet.cz/ostatniweby/vidamenu/](https://adamplanet.cz/ostatniweby/vidamenu/)
 
-Rozlišení 1920x1080. Hra není responzivní, tudíž se nepřispůsobí velikosti okna prohlížeče.
+Rozlišení 1920x1080. Menu není responzivní, tudíž se nepřispůsobí velikosti okna prohlížeče.
 
 #
 
-![traveling-salesman](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/03da34c3-75fb-44d9-81a4-d97079436831)
-
-![traveling-salesman-map](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/e19a7ad7-7329-48d4-93f7-e0d8ee2000b8)
+![Snímek obrazovky 2023-11-02 v 14 35 18](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/12b4456f-6009-41a5-8279-5c0a7009462a)
 
 
 #
