@@ -6,7 +6,14 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./app.css";
 
-function PreGame(props: any) {
+interface GameProps {
+  language: string;
+  setGameStarts: (value: boolean) => void;
+  gameStarts: boolean;
+  isActive: boolean;
+}
+
+function AppGame(props: GameProps) {
   const [gameDifficulty, setGameDifficulty] = useState<string>("Easy");
 
   const navigate = useNavigate();
@@ -60,4 +67,4 @@ function PreGame(props: any) {
   );
 }
 
-export default PreGame;
+export default AppGame;

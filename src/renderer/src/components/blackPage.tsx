@@ -1,4 +1,4 @@
-// FIXING PROBLEM WITH Z-INDEX
+// FIXING BUG WITH Z-INDEX
 
 function BlackPage() {
   return (

@@ -11,10 +11,10 @@ import setup from "../setup.json";
 function App() {
   const [activePage, setActivePage] = useState<string>("home");
   const [language, setLanguage] = useState<string>("cz");
+  const [sectionInfo, setSectionInfo] = useState<any>({});
   const [gameStarts, setGameStarts] = useState<boolean>(false);
   const [lastActivity, setLastActivity] = useState<Date | null>(null);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [sectionInfo, setSectionInfo] = useState<any>({});
 
   const inactivityTimeout = 3.5 * 60 * 1000;
 
