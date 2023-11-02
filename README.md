@@ -7,9 +7,9 @@ Rozlišení 1920x1080. Hra není responzivní, tudíž se nepřispůsobí veliko
 
 #
 
-![traveling-salesman](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/d5574ecc-c6bd-4d07-a5e2-d348a4465f3d)
+![traveling-salesman](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/03da34c3-75fb-44d9-81a4-d97079436831)
 
-![traveling-salesman-map](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/afe968ec-8dc1-439c-806e-b1a6a54fecb4)
+![traveling-salesman-map](https://github.com/AdamBurysek/0131_traveling-salesman/assets/114564710/e19a7ad7-7329-48d4-93f7-e0d8ee2000b8)
 
 
 #
