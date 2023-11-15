@@ -19,9 +19,8 @@
   "files": [
     // other files...
     "src/renderer/setup.json",
-    "src/renderer/src/data/sectionsData.json",
-    "src/renderer/src/game/data/easy.json",
-    "src/renderer/src/game/data/medium.json",
-    "src/renderer/src/game/data/hard.json"
+    "src/renderer/src/data/easy.json",
+    "src/renderer/src/data/medium.json",
+    "src/renderer/src/data/hard.json"
   ]
 }

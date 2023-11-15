@@ -1,43 +1,16 @@
-import sectionsData from "../data/sectionsData.json";
+// This function adding boolean value to coordinates. It's for checking, if city is visited
+export function modifyCoordinates(coordinates: any[]): any[] {
+  const modifiedCoordinates = [...coordinates];
 
-interface Exhibitions {
-  [key: string]: {
-    label_cz: string;
-    label_en: string;
-    label_de: string;
-    color: string;
-  };
-}
-
-interface Section {
-  label_cz: string;
-  label_en: string;
-  label_de: string;
-  color: string;
-}
-
-export function switchLanguage(language: string) {
-  if (language == "cz") {
-    language = "en";
-  } else if (language == "en") {
-    language = "de";
-  } else {
-    language = "cz";
+  // Set the first city to true (visited)
+  if (modifiedCoordinates.length > 0) {
+    modifiedCoordinates[0][6] = true;
   }
-  return language;
-}
 
-export function findSection(section: string): Section | [] {
-  const data: Exhibitions = sectionsData;
-  const keys: string[] = Object.keys(sectionsData);
-  for (const key of keys) {
-    if (key.toLowerCase() === section.toLowerCase()) {
-      return data[key];
-    }
+  // Set the rest of the cities to false (not visited)
+  for (let i = 1; i < modifiedCoordinates.length; i++) {
+    modifiedCoordinates[i][6] = false;
   }
-  const validSections = keys.join(", ");
-  console.error(
-    `Don't find section. Please use a valid section name. Possible section names are: ${validSections}.`
-  );
-  return [];
+
+  return modifiedCoordinates;
 }

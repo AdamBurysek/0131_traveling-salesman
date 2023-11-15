@@ -1,99 +1,62 @@
-import UserInterface from "./components/userInterface";
+import { Routes, Route } from "react-router-dom";
+import GamePage from "./components/gamePage";
+import StartPage from "./components/startPage";
+import NotFound from "./components/notFound";
 import { useEffect, useState } from "react";
-import Game from "./game/Game";
-import HowToPage from "./gameInfo/howToPage";
-import KnowMorePage from "./gameInfo/knowMorePage";
-import MapPage from "./components/mapPage";
-import BlackPage from "./components/blackPage";
-import { findSection, switchLanguage } from "./utils/functions";
-import setup from "../setup.json";
+import { useNavigate } from "react-router-dom";
+import "./app.css";
 
-function App() {
-  const [activePage, setActivePage] = useState<string>("home");
-  const [language, setLanguage] = useState<string>("cz");
-  const [sectionInfo, setSectionInfo] = useState<any>({});
-  const [gameStarts, setGameStarts] = useState<boolean>(false);
-  const [lastActivity, setLastActivity] = useState<Date | null>(null);
-  const [isActive, setIsActive] = useState<boolean>(false);
+function App(props: any) {
+  const [gameDifficulty, setGameDifficulty] = useState<string>("Easy");
 
-  const inactivityTimeout = 3.5 * 60 * 1000;
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    setSectionInfo(findSection(setup.section));
-    const handleActivity = () => {
-      setLastActivity(new Date());
-      setIsActive(true);
-    };
-    handleActivity();
-    window.addEventListener("mousedown", handleActivity);
-    window.addEventListener("touchmove", handleActivity);
-    return () => {
-      window.removeEventListener("mousedown", handleActivity);
-      window.removeEventListener("touchmove", handleActivity);
-    };
-  }, []);
-
-  useEffect(() => {
-    const checkInactivity = () => {
-      if (
-        lastActivity &&
-        new Date().getTime() - lastActivity.getTime() > inactivityTimeout
-      ) {
-        if (isActive) {
-          setIsActive(false);
-          setActivePage("home");
-          setLanguage("cz");
-        }
-      } else {
-        setIsActive(true);
-      }
-    };
-    let intervalId = setInterval(checkInactivity, 1000);
-    return () => clearInterval(intervalId);
-  }, [lastActivity, isActive]);
-
-  function handleLanguageClick() {
-    setLanguage(switchLanguage(language));
-  }
-
-  function handleSideButtonClick(e: React.MouseEvent<HTMLButtonElement>) {
+  const redirectToGame = (e: React.MouseEvent<HTMLButtonElement>) => {
     const buttonId: string = e.currentTarget.id;
-    setActivePage(buttonId);
+    setGameDifficulty(buttonId);
+    navigate("/game");
+    props.setGameStarts(true);
+  };
+
+  function gameReset() {
+    if (props.isActive === false) {
+      navigate("/");
+      props.setGameStarts(false);
+    }
   }
+
+  useEffect(() => {
+    gameReset();
+  }, [props.isActive]);
 
   return (
-    <>
-      <div>
-        <UserInterface
-          activePage={activePage}
-          language={language}
-          handleLanguageClick={handleLanguageClick}
-          handleSideButtonClick={handleSideButtonClick}
-          gameStarts={gameStarts}
-          sectionInfo={sectionInfo}
-        >
-          <Game
-            language={language}
-            setGameStarts={setGameStarts}
-            gameStarts={gameStarts}
-            isActive={isActive}
-          ></Game>
-        </UserInterface>
-        <HowToPage
-          activePage={activePage}
-          language={language}
-        ></HowToPage>
-        <KnowMorePage
-          activePage={activePage}
-          language={language}
-        ></KnowMorePage>
-        <MapPage
-          activePage={activePage}
-          language={language}
-        ></MapPage>
-        <BlackPage></BlackPage>
-      </div>
-    </>
+    <div>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <StartPage
+              redirectToGame={redirectToGame}
+              language={props.language}
+            />
+          }
+        />
+        <Route
+          path="/game"
+          element={
+            <GamePage
+              gameDifficulty={gameDifficulty}
+              language={props.language}
+              setGameStarts={props.setGameStarts}
+            />
+          }
+        />
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
+      </Routes>
+    </div>
   );
 }
 

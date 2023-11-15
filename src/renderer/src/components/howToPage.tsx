@@ -1,12 +1,7 @@
 import "./howToPage.css";
 import { useEffect, useRef } from "react";
 
-interface HowToPageProps {
-  activePage: string;
-  language: string;
-}
-
-const HowToPage: React.FC<HowToPageProps> = (props) => {
+const HowToPage = (props: any) => {
   const howToElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
