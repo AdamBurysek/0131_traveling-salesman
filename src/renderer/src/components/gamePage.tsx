@@ -13,13 +13,6 @@ let mediumArray: any = medium;
 let hardArray: any = hard;
 
 function GamePage(props: any) {
-  const navigate = useNavigate();
-
-  const gotoMainPage = () => {
-    navigate("/");
-    props.setGameStarts(false);
-  };
-
   const canvasRef: any = useRef(null);
   const [gameData, setGameData] = useState<any>({});
   const [clickCounter, setClickCounter] = useState<number>(1);
@@ -29,9 +22,16 @@ function GamePage(props: any) {
   const [showResults, setShowResults] = useState<boolean>(false);
   const [drawingResults, setDrawingResults] = useState<boolean>(false);
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     settingGameData();
   }, []);
+
+  const gotoMainPage = () => {
+    navigate("/");
+    props.setGameStarts(false);
+  };
 
   let gameArray: {
     image: string | undefined;
