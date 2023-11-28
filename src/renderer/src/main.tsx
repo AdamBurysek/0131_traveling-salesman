@@ -8,17 +8,17 @@ import setup from "../setup.json";
 import { HashRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <>
-      <HashRouter>
-        <VidaMenu setup={setup}>
-          <App></App>
-          <HowToPage></HowToPage>
-          <KnowMorePage></KnowMorePage>
-        </VidaMenu>
-      </HashRouter>
-    </>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <React.Fragment>
+    <HashRouter>
+      <VidaMenu setup={setup}>
+        <App></App>
+        <HowToPage></HowToPage>
+        <KnowMorePage></KnowMorePage>
+      </VidaMenu>
+    </HashRouter>
+  </React.Fragment>
+  // </React.StrictMode>
 );
 
 postMessage({ payload: "removeLoading" }, "*");
