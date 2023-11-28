@@ -35,11 +35,9 @@
   },
   {
     "id": 2,
-    "shortestDistance": 1038,
+    "shortestDistance": 1031,
     "coordinates": [
       [1409, 628, "Olomouc", "Olomouc", "Olmütz", false],
-      [1466, 837, "Uherské Hradiště", "Uherský Brod", "Ungarisch Brod", true],
-      [1721, 554, "Havířov", "Havířov", "Havirov", false],
       [1339, 479, "Šumperk", "Šumperk", "Mährisch Schönberg", true],
       [985, 162, "Špindlerův Mlýn", "Špindlerův Mlýn", "Spindlermühle", true],
       [685, 429, "Praha", "Prague", "Prag", true],
@@ -53,7 +51,9 @@
         "Böhmisch Budweis",
         false
       ],
-      [976, 621, "Havlíčkův Brod", "Havlíčkův Brod", "Deutschbrod", false]
+      [976, 621, "Havlíčkův Brod", "Havlíčkův Brod", "Deutschbrod", false],
+      [1466, 837, "Uherské Hradiště", "Uherský Brod", "Ungarisch Brod", true],
+      [1721, 554, "Havířov", "Havířov", "Havirov", false]
     ]
   },
   {

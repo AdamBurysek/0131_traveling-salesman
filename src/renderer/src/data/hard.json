@@ -1,62 +1,70 @@
-[{
-    "image":"jihomoravskyKraj",
-    "scale":10.102
+[
+  {
+    "image": "jihomoravskyKraj",
+    "scale": 10.102
   },
-      { 
-        "id":1,
-        "shortestDistance": 34557,
-        "coordinates": [
-          [923, 492, "Praha", "Prague", "Prag", false],
-          [757, 371, "Reykjavík", "Reykjavik","Reykjavík",false],
-          [523, 551, "New York", "New York", "New York", false],
-          [300, 495, "Vancouver", "Vancouver", "Vancouver", true],
-          [434, 610, "Houston","Houston","Houston", true],
-          [509, 810, "Lima","Lima","Lima", false],
-          [783, 619, "Santa Cruz De Tenerife", "Santa Cruz De Tenerife","Santa Cruz De Tenerife",false],
-          [970, 583, "Heraklion", "Heraklion","Heraklion",false],
-          [1071, 839, "Antananarivo", "Antananarivo","Antananarivo",false],
-          [1311, 692, "Bangkok", "Bangkok","Bangkok",false],
-          [1550, 883, "Brisbane", "Brisbane","Brisbane",false],
-          [1434, 579, "Daejeon", "Daejeon","Daejeon",false],
-          [970, 410, "Helsinki", "Helsinki","Helsinki",true]
-        ]
-      },
-      {
-        "id":2,
-        "shortestDistance": 38193,
-        "coordinates": [
-          [933, 498, "Brno", "Brno", "Brünn", false],
-          [778, 603, "Funchal", "Funchal","Funchal",false],
-          [418, 489, "Winnipeg", "Winnipeg", "Winnipeg", true],
-          [179, 401, "Anchorage", "Anchorage","Anchorage",true],
-          [320, 589, "Los Angeles", "Los Angeles", "Los Angeles", false],
-          [493, 632, "Miami","Miami","Miami", true],
-          [662, 860, "Rio de Janeiro","Rio de Janeiro","Rio de Janeiro", false],
-          [941, 917, "Kapské Město", "Cape Town","Kapstadt",false],
-          [924, 700, "N'Djamena", "N'Djamena","N'Djamena",false],
-          [1219, 721, "Kolombo", "Colombo","Colombo",false],
-          [1542, 915, "Sydney", "Sydney","Sydney",false],
-          [1386, 558, "Peking", "Beijing","Peking",false],
-          [974, 292, "Alta", "Alta","Alta",true]
-        ]
-      },
-      {
-        "id":3,
-        "shortestDistance": 33053,
-        "coordinates": [
-          [931, 504, "Vídeň", "Vienna", "Wien", true],
-          [1000, 610, "Káhira", "Cairo","Kairo",false],
-          [1107, 635, "Dubaj", "Dubai","Dubai",false],
-          [1326, 746, "Singapur", "Singapore","Singapur",false],
-          [1374, 610, "Wu-chan", "Wuhan","Wuhan",false],
-          [1491, 580, "Tokio", "Tokyo","Tokio",false],
-          [1515, 941, "Melbourne", "Melbourne","Melbourne",false],
-          [1380, 904, "Perth","Perth","Perth", false],
-          [668, 910, "Port Stanley", "Port Stanley","Port Stanley",false],
-          [483, 646, "Havana","Havana","Havanna", true],
-          [337, 577, "Las Vegas", "Las Vegas", "Las Vegas", true],
-          [558, 470, "Fermont", "Fermont", "Fermont", true],
-          [933, 324, "Narvik", "Narvik","Narvik",false]
-        ]
-      }
+  {
+    "id": 1,
+    "shortestDistance": 33902,
+    "coordinates": [
+      [923, 492, "Praha", "Prague", "Prag", false],
+      [970, 410, "Helsinki", "Helsinki", "Helsinki", true],
+      [757, 371, "Reykjavík", "Reykjavik", "Reykjavík", false],
+      [523, 551, "New York", "New York", "New York", false],
+      [300, 495, "Vancouver", "Vancouver", "Vancouver", true],
+      [434, 610, "Houston", "Houston", "Houston", true],
+      [509, 810, "Lima", "Lima", "Lima", false],
+      [
+        783,
+        619,
+        "Santa Cruz De Tenerife",
+        "Santa Cruz De Tenerife",
+        "Santa Cruz De Tenerife",
+        false
+      ],
+      [1071, 839, "Antananarivo", "Antananarivo", "Antananarivo", false],
+      [1550, 883, "Brisbane", "Brisbane", "Brisbane", false],
+      [1434, 579, "Daejeon", "Daejeon", "Daejeon", false],
+      [1311, 692, "Bangkok", "Bangkok", "Bangkok", false],
+      [970, 583, "Heraklion", "Heraklion", "Heraklion", false]
     ]
+  },
+  {
+    "id": 2,
+    "shortestDistance": 38193,
+    "coordinates": [
+      [933, 498, "Brno", "Brno", "Brünn", false],
+      [778, 603, "Funchal", "Funchal", "Funchal", false],
+      [418, 489, "Winnipeg", "Winnipeg", "Winnipeg", true],
+      [179, 401, "Anchorage", "Anchorage", "Anchorage", true],
+      [320, 589, "Los Angeles", "Los Angeles", "Los Angeles", false],
+      [493, 632, "Miami", "Miami", "Miami", true],
+      [662, 860, "Rio de Janeiro", "Rio de Janeiro", "Rio de Janeiro", false],
+      [941, 917, "Kapské Město", "Cape Town", "Kapstadt", false],
+      [924, 700, "N'Djamena", "N'Djamena", "N'Djamena", false],
+      [1219, 721, "Kolombo", "Colombo", "Colombo", false],
+      [1542, 915, "Sydney", "Sydney", "Sydney", false],
+      [1386, 558, "Peking", "Beijing", "Peking", false],
+      [974, 292, "Alta", "Alta", "Alta", true]
+    ]
+  },
+  {
+    "id": 3,
+    "shortestDistance": 33053,
+    "coordinates": [
+      [931, 504, "Vídeň", "Vienna", "Wien", true],
+      [1000, 610, "Káhira", "Cairo", "Kairo", false],
+      [1107, 635, "Dubaj", "Dubai", "Dubai", false],
+      [1326, 746, "Singapur", "Singapore", "Singapur", false],
+      [1374, 610, "Wu-chan", "Wuhan", "Wuhan", false],
+      [1491, 580, "Tokio", "Tokyo", "Tokio", false],
+      [1515, 941, "Melbourne", "Melbourne", "Melbourne", false],
+      [1380, 904, "Perth", "Perth", "Perth", false],
+      [668, 910, "Port Stanley", "Port Stanley", "Port Stanley", false],
+      [483, 646, "Havana", "Havana", "Havanna", true],
+      [337, 577, "Las Vegas", "Las Vegas", "Las Vegas", true],
+      [558, 470, "Fermont", "Fermont", "Fermont", true],
+      [933, 324, "Narvik", "Narvik", "Narvik", false]
+    ]
+  }
+]
