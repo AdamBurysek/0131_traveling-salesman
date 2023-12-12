@@ -1,12 +1,12 @@
 {
-  "name": "obchodni-cestujici-full",
+  "name": "traveling-salesman",
   "version": "1.0.0",
   "description": "An Electron application with React and TypeScript",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://www.electronjs.org",
+  "author": "Adam Buryšek",
+  "homepage": "https://adamplanet.cz/ostatniweby/travelingsalesman",
   "build": {
-    "productName": "traveling-salesman"
+    "productName": "VIDA - Traveling Salesman"
   },
   "scripts": {
     "format": "prettier --write .",

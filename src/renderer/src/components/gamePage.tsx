@@ -6,14 +6,18 @@ import { useNavigate } from "react-router-dom";
 import easy from "../data/easy.json";
 import medium from "../data/medium.json";
 import hard from "../data/hard.json";
-import { modifyCoordinates } from "../utils/functions";
 
 let easyArray: any = easy;
 let mediumArray: any = medium;
 let hardArray: any = hard;
 
-function GamePage(props: any) {
-  const canvasRef: any = useRef(null);
+interface GamePageProps {
+  gameDifficulty: string;
+  language: string;
+  setGameStarts: (value: boolean) => void;
+}
+
+function GamePage(props: GamePageProps) {
   const [gameData, setGameData] = useState<any>({});
   const [clickCounter, setClickCounter] = useState<number>(1);
   const [distanceCounter, setDistanceCounter] = useState<number>(0);
@@ -23,15 +27,11 @@ function GamePage(props: any) {
   const [drawingResults, setDrawingResults] = useState<boolean>(false);
 
   const navigate = useNavigate();
+  const canvasRef: any = useRef(null);
 
   useEffect(() => {
     settingGameData();
   }, []);
-
-  const gotoMainPage = () => {
-    navigate("/");
-    props.setGameStarts(false);
-  };
 
   let gameArray: {
     image: string | undefined;
@@ -40,29 +40,20 @@ function GamePage(props: any) {
     coords: any[][] | undefined;
   }[] = [];
 
-  // LOGGING COORDS TO CONSOLE --------------------------------------------------------------------------
-
-  // function logCoordinates(event: MouseEvent) {
-  //   const x = event.clientX;
-  //   const y = event.clientY;
-  //   console.log(`Coordinates (X: ${x - 10}px, Y: ${y - 10}px)`);
-  // }
-
-  // document.addEventListener("click", logCoordinates);
-
-  // LOGGING COORDS TO CONSOLE --------------------------------------------------------------------------
+  const gotoMainPage = () => {
+    navigate("/");
+    props.setGameStarts(false);
+  };
 
   function settingGameData() {
     let randomNumber: number = Math.floor(Math.random() * 3) + 1;
-
-    // randomNumber = 2;
 
     if (props.gameDifficulty === "Easy") {
       gameArray.push({
         image: jihomoravskyKraj,
         scale: easyArray[0].scale,
         shortestDistance: easyArray[randomNumber].shortestDistance,
-        coords: modifyCoordinates(easyArray[randomNumber].coordinates),
+        coords: initializeVisitedCities(easyArray[randomNumber].coordinates),
       });
     }
     if (props.gameDifficulty === "Medium") {
@@ -70,7 +61,7 @@ function GamePage(props: any) {
         image: czechMap,
         scale: mediumArray[0].scale,
         shortestDistance: mediumArray[randomNumber].shortestDistance,
-        coords: modifyCoordinates(mediumArray[randomNumber].coordinates),
+        coords: initializeVisitedCities(mediumArray[randomNumber].coordinates),
       });
     }
     if (props.gameDifficulty === "Hard") {
@@ -78,7 +69,7 @@ function GamePage(props: any) {
         image: worldMap,
         scale: hardArray[0].scale,
         shortestDistance: hardArray[randomNumber].shortestDistance,
-        coords: modifyCoordinates(hardArray[randomNumber].coordinates),
+        coords: initializeVisitedCities(hardArray[randomNumber].coordinates),
       });
     }
     const [gameItem] = gameArray;
@@ -89,13 +80,13 @@ function GamePage(props: any) {
 
   function tryAgain() {
     if (canvasRef.current) {
-      const canvas: any = canvasRef.current;
+      const canvas: HTMLCanvasElement = canvasRef.current;
       const ctx: any = canvas.getContext("2d");
       ctx.reset();
       setShowResults(false);
       setClickCounter(1);
       setDistanceCounter(0);
-      gameData.coords = modifyCoordinates(gameData.coords);
+      gameData.coords = initializeVisitedCities(gameData.coords);
     }
   }
 
@@ -103,7 +94,7 @@ function GamePage(props: any) {
     if (canvasRef.current) {
       setNewX(x);
       setNewY(y);
-      const canvas: any = canvasRef.current;
+      const canvas: HTMLCanvasElement = canvasRef.current;
       const ctx: any = canvas.getContext("2d");
       ctx.beginPath();
       ctx.setLineDash([21, 3]);
@@ -115,9 +106,15 @@ function GamePage(props: any) {
     }
   }
 
+  function endingLine(a: number, b: number, c: number, d: number) {
+    drawLine(a, b, c, d);
+    calculateDistance(a, b, c, d);
+    setShowResults(true);
+  }
+
   function drawRestult() {
     if (canvasRef.current) {
-      const canvas: any = canvasRef.current;
+      const canvas: HTMLCanvasElement = canvasRef.current;
       const ctx: any = canvas.getContext("2d");
       ctx.reset();
       setDistanceCounter(0);
@@ -173,6 +170,17 @@ function GamePage(props: any) {
     setDistanceCounter((distanceCounter) => distanceCounter + hypotenuse);
   }
 
+  function initializeVisitedCities(coordinates: any[]): any[] {
+    const modifiedCoordinates = [...coordinates];
+    if (modifiedCoordinates.length > 0) {
+      modifiedCoordinates[0][6] = true;
+    }
+    for (let i = 1; i < modifiedCoordinates.length; i++) {
+      modifiedCoordinates[i][6] = false;
+    }
+    return modifiedCoordinates;
+  }
+
   const handleCityButtonClick = (
     coord: [number, number, string, string, string, boolean, boolean]
   ) => {
@@ -189,12 +197,6 @@ function GamePage(props: any) {
       );
     }
   };
-
-  function endingLine(a: number, b: number, c: number, d: number) {
-    drawLine(a, b, c, d);
-    calculateDistance(a, b, c, d);
-    setShowResults(true);
-  }
 
   return (
     <div className="game-screen">
@@ -232,19 +234,19 @@ function GamePage(props: any) {
         <h3 className="gamepage_text totaldistance_text">
           {props.language === "cz" && (
             <span>
-              Celková vzdálenost: {distanceCounter}{" "}
+              Celková vzdálenost: {distanceCounter}
               {props.gameDifficulty === "Hard" ? "Km*" : "Km"}
             </span>
           )}
           {props.language === "en" && (
             <span>
-              Total Distance: {distanceCounter}{" "}
+              Total Distance: {distanceCounter}
               {props.gameDifficulty === "Hard" ? "Km*" : "Km"}
             </span>
           )}
           {props.language === "de" && (
             <span>
-              Gesamtentfernung: {distanceCounter}{" "}
+              Gesamtentfernung: {distanceCounter}
               {props.gameDifficulty === "Hard" ? "Km*" : "Km"}
             </span>
           )}

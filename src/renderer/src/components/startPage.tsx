@@ -3,7 +3,12 @@ import CloudsImg from "../img/Clouds.webp";
 import "./startPage.css";
 import { useState, useEffect } from "react";
 
-const StartPage = (props: any) => {
+interface StartPageProps {
+  redirectToGame: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  language: string;
+}
+
+const StartPage: React.FC<StartPageProps> = (props) => {
   const [animation, setAnimation] = useState<boolean>(false);
   const [btnAnimation, setBtnAnimation] = useState<number>(4);
 

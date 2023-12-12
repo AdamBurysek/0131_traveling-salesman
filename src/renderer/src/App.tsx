@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import GamePage from "./components/gamePage";
 import StartPage from "./components/startPage";
-import NotFound from "./components/notFound";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./app.css";
@@ -50,10 +49,6 @@ function App(props: any) {
               setGameStarts={props.setGameStarts}
             />
           }
-        />
-        <Route
-          path="*"
-          element={<NotFound />}
         />
       </Routes>
     </div>
