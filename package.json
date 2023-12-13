@@ -6,7 +6,8 @@
   "author": "Adam Buryšek",
   "homepage": "https://adamplanet.cz/ostatniweby/travelingsalesman",
   "build": {
-    "productName": "VIDA - Traveling Salesman"
+    "productName": "VIDA - Traveling Salesman",
+    "icon": "./resources/icon.png"
   },
   "scripts": {
     "format": "prettier --write .",
