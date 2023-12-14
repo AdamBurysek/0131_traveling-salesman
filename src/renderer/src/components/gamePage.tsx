@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import jihomoravskyKraj from "../img/jihomoravskyKraj.webp";
 import czechMap from "../img/czechMap.webp";
 import worldMap from "../img/worldMap.webp";
-import { useNavigate } from "react-router-dom";
 import easy from "../data/easy.json";
 import medium from "../data/medium.json";
 import hard from "../data/hard.json";

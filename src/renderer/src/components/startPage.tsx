@@ -1,7 +1,7 @@
+import { useState, useEffect } from "react";
 import ObchodniCestujiciImg from "../img/ObchodniCestujiciImage.webp";
 import CloudsImg from "../img/Clouds.webp";
 import "./startPage.css";
-import { useState, useEffect } from "react";
 
 interface StartPageProps {
   redirectToGame: (e: React.MouseEvent<HTMLButtonElement>) => void;

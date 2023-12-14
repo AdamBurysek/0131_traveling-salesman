@@ -1,8 +1,8 @@
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import GamePage from "./components/gamePage";
 import StartPage from "./components/startPage";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./app.css";
 
 function App(props: any) {
