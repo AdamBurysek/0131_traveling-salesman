@@ -1,15 +1,11 @@
 {
-  "server": false,
   "id": "131",
   "section": "human",
   "label": {
-    "cz": "problém obchodního cestujícího",
+    "cz": "Problém obchodního cestujícího",
     "en": "Travelling Salesman Problem",
     "de": "Problem des Handlungsreisenden"
   },
-  "x": 50,
-  "y": 50,
-  "inactivityTimeoutInMin": 3.5,
-  "port": "/dev/ttyUSB0",
-  "baudrate": 9600
+  "exhibitPostion": { "x": 50, "y": 50 },
+  "inactivityTimeoutInMin": 3.5
 }
