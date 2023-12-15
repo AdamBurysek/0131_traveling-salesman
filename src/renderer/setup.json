@@ -6,6 +6,6 @@
     "en": "Travelling Salesman Problem",
     "de": "Problem des Handlungsreisenden"
   },
-  "exhibitPostion": { "x": 50, "y": 50 },
+  "exhibitPostion": { "x": 720, "y": 500 },
   "inactivityTimeoutInMin": 3.5
 }
