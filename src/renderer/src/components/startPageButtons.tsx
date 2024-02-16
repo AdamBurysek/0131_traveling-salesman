@@ -8,19 +8,19 @@ interface StartPageButtonsProps {
 const StartPageButtons: React.FC<StartPageButtonsProps> = (props) => {
   const [btnAnimation, setBtnAnimation] = useState<number>(4);
 
-  const btnAnimate = () => {
-    for (let i = 0; i <= 4; i++) {
-      setTimeout(() => {
-        setBtnAnimation(i);
-      }, i * 270);
-    }
-  };
-
   useEffect(() => {
+    const btnAnimate = () => {
+      for (let i = 0; i <= 4; i++) {
+        setTimeout(() => {
+          setBtnAnimation(i);
+        }, i * 270);
+      }
+    };
     if (btnAnimation === 4) {
       setTimeout(btnAnimate, 10000);
     }
   }, [btnAnimation]);
+
   return (
     <div>
       <button

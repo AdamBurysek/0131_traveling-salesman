@@ -9,6 +9,9 @@ const MovingClouds = () => {
   }
 
   useEffect(() => {
+    const animate = () => {
+      setTimeout(animationSwitch, 690000);
+    };
     animate();
   }, [animation]);
 
@@ -16,9 +19,6 @@ const MovingClouds = () => {
     setTimeout(animationSwitch, 50);
   }, []);
 
-  const animate = () => {
-    setTimeout(animationSwitch, 690000);
-  };
   return (
     <img
       className={animation ? "clouds clouds_moving" : "clouds"}
